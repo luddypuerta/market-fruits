@@ -1,5 +1,3 @@
-import { Shipping } from "../interfaces/Shipping";
-import { Invoice } from "../interfaces/Invoice";
-import { Cart } from "../interfaces/Cart";
+import { Invoice, Shipping, Cart } from "../interfaces";
 export declare const generateInvoice: (customer: Shipping, items: Cart[]) => Invoice;
 //# sourceMappingURL=generateInvoice.d.ts.map
