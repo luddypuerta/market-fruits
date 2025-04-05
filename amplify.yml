@@ -5,6 +5,7 @@ applications:
       phases:
         preBuild:
           commands:
+            - npm install -g pnpm@8.15.6
             - pnpm install
         build:
           commands:
