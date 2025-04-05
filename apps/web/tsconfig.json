@@ -4,7 +4,9 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "@mfe/ui-lib": ["../../packages/ui-lib"]
+      "@mfe/ui-lib": ["../../packages/ui-lib"],
+      "@libluddy/ui-lib": ["../../packages/ui-lib"],
+      "@libluddy/ui-lib/*": ["../../packages/ui-lib/*"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
