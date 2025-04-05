@@ -28,7 +28,6 @@ const Header = () => {
   };
 
   const goToLogin = () => {
-    console.log("goToLogin");
     navigate("/auth/iniciar-sesion");
   };
 

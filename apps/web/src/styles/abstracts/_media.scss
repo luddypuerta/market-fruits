@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin respond($breakpoint) {
     @if $breakpoint ==sm {
         @media (max-width: $breakpoint-sm) {

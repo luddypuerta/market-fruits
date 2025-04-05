@@ -1,17 +1,42 @@
-
 import ProductList from "@/pages/products/product-list/ProductList";
 import { mockProducts } from "@/utils/mocks/products.mock";
 import Header from "@/components/shared/header/Header";
-import { useEffect } from "react";
+import { CircularProgress, Box } from "@mui/material";
+import { useEffect, useState } from "react";
 import "./Home.scss";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const existingData = localStorage.getItem("products");
-    if (!existingData) {
-      localStorage.setItem("products", JSON.stringify(mockProducts));
-    }
+    const initializeData = () => {
+      const existingData = localStorage.getItem("products");
+      if (!existingData) {
+        localStorage.setItem("products", JSON.stringify(mockProducts));
+      }
+    };
+
+    initializeData();
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return (
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        height="100vh"
+      >
+        <CircularProgress />
+      </Box>
+    );
+  }
 
   return (
     <div className="home-container">

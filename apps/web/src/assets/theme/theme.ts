@@ -43,10 +43,10 @@ export const theme = createTheme({
                         borderBottom: 'none',
                     },
                     '&.Mui-disabled:after': {
-                        borderBottom: 0, // Elimina la línea punteada en la parte inferior cuando el TextField está inhabilitado
+                        borderBottom: 0,
                     },
                     '&.Mui-disabled:before': {
-                        borderBottom: 0, // Elimina la línea punteada en la parte inferior cuando el TextField está inhabilitado
+                        borderBottom: 0,
                     },
                 }
             }

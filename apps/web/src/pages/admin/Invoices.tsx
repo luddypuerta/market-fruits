@@ -1,6 +1,6 @@
+import { IconButton, Divider, CircularProgress } from "@mui/material";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import Header from "@/components/shared/header/Header";
-import { IconButton, Divider } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import PaidIcon from "@mui/icons-material/Paid";
 import { Invoice } from "@/interfaces/Invoice";
@@ -28,11 +28,30 @@ import {
 const Invoices = () => {
   const [invoices, setInvoices] = useState<Invoice[]>([]);
   const [selectedInvoice, setSelectedInvoice] = useState<Invoice | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const data = localStorage.getItem("invoices");
-    setInvoices(data ? JSON.parse(data) : []);
+    const timer = setTimeout(() => {
+      const data = localStorage.getItem("invoices");
+      setInvoices(data ? JSON.parse(data) : []);
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return (
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        height="100vh"
+      >
+        <CircularProgress />
+      </Box>
+    );
+  }
 
   return (
     <>

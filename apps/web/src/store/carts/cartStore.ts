@@ -56,7 +56,6 @@ export const useCartStore = create<CartState>((set, get) => ({
     localStorage.removeItem("cart");
     set({ items: [] });
 
-    // Restaurar stock original (si es necesario hacerlo visual)
     const original = localStorage.getItem("products");
     if (original) {
       const resetProducts = JSON.parse(original);
