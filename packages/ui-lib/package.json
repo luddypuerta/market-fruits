@@ -10,7 +10,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc",
+    "clean": "rm -rf dist",
+    "build": "pnpm clean && tsc",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
