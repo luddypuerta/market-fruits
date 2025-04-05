@@ -5,9 +5,10 @@
     "paths": {
       "@/*": ["src/*"],
       "@mfe/ui-lib": ["../../packages/ui-lib"]
-    }
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler"
   },
   "include": ["src"]
 }
-
-
