@@ -104,7 +104,7 @@ const Cart: React.FC<CartProps> = ({ onCloseCart }) => {
           items.map((item) => (
             <div key={item.id} className="cart-item">
               <img
-                src={item.image ?? "/assets/images/default.png"}
+                src={`/assets/images/${item.image}`}
                 alt={item.name}
                 className="cart-item__img"
               />
