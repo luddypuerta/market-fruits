@@ -7,6 +7,7 @@ applications:
           commands:
             - npm install -g pnpm@8.15.6
             - pnpm install
+            - pnpm --filter @libluddy/ui-lib build
         build:
           commands:
             - pnpm --filter web build
@@ -18,3 +19,4 @@ applications:
         paths:
           - node_modules/**/*
           - apps/web/node_modules/**/*
+          - packages/ui-lib/node_modules/**/*
