@@ -9,6 +9,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+  },
   server: {
     watch: {
       usePolling: true,
@@ -16,10 +20,6 @@ export default defineConfig({
     host: true,
     strictPort: true,
     port: 5005,
-  },
-  build: {
-    outDir: 'dist',
-    emptyOutDir: true, 
   },
   test: {
     globals: true,
