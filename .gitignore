@@ -1,1 +1,45 @@
-node_modules
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+storybook-static/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Vite
+.vite/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# MacOS files
+*.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Package manager lock files (solo si no quieres subirlos)
+# pnpm-lock.yaml  # (normalmente sí se sube para asegurar versiones)
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Storybook cache
+.cache/
+
+# Output of coverage reports
+coverage/
+
+# GitHub specific
+.github/
