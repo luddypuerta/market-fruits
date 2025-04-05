@@ -1,16 +1,16 @@
 version: 1
 applications:
-  - frontend:
+  - appRoot: apps/web
+    frontend:
       phases:
         preBuild:
           commands:
-            - cd apps/web
             - pnpm install
         build:
           commands:
-            - pnpm run build
+            - pnpm --filter web build
       artifacts:
-        baseDirectory: dist
+        baseDirectory: apps/web/dist
         files:
           - '**/*'
       cache:
