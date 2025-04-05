@@ -17,6 +17,10 @@ export default defineConfig({
     strictPort: true,
     port: 5005,
   },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true, 
+  },
   test: {
     globals: true,
     environment: 'jsdom',
