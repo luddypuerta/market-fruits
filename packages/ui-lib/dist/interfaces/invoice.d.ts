@@ -7,3 +7,4 @@ export interface Invoice {
     total: number;
     date: string;
 }
+//# sourceMappingURL=Invoice.d.ts.map

@@ -4,3 +4,4 @@ export interface Shipping {
     email: string;
     country: string;
 }
+//# sourceMappingURL=Shipping.d.ts.map

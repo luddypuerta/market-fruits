@@ -7,3 +7,4 @@ interface ButtonProps {
 }
 export declare const Button: React.FC<ButtonProps>;
 export {};
+//# sourceMappingURL=Button.d.ts.map

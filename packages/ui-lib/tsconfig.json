@@ -1,12 +1,20 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-      "outDir": "dist",
-      "declaration": true,
-      "emitDeclarationOnly": false,
-      "composite": false,
-      "skipLibCheck": true
-    },
-    "include": ["**/*.ts"]
-  }
-  
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "composite": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["src"]
+}

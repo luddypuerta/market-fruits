@@ -1,6 +1,6 @@
 {
   "name": "@libluddy/ui-lib",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -10,8 +10,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc && pnpm copy:interfaces",
-    "copy:interfaces": "cp -R interfaces dist/interfaces",
+    "build": "tsc",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
