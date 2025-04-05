@@ -1,7 +1,7 @@
 {
     "name": "market-monorepo",
     "private": true,
-    "version": "1.0.0",
+    "version": "1.0.1",
     "devDependencies": {
         "@types/node": "^22.13.14",
         "@vitest/ui": "^3.1.1",
