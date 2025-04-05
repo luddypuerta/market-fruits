@@ -1,0 +1,105 @@
+@use "@/styles/abstracts" as *;
+@use "sass:color";
+
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-sm $spacing-lg;
+  background-color: white;
+  border-bottom: 1px solid $color-border;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    & .header__logo {
+      width: 32px;
+      height: 32px;
+     
+    }
+
+    & .header__brand {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: $color-primary;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__user {
+    font-weight: 500;
+    color: #333;
+  }
+
+  &__logout {
+    border: 1px solid $color-cancel;
+    background-color: $color-white;
+    color: $color-cancel;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+
+    :hover {
+      background-color: $color-cancel;
+      color: white;
+    }
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xxs;
+    background-color: $color-add-cart;
+    color: #2b1c01;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    height: 35px;
+    border: none;
+
+    & img {
+      width: 18px;
+    }
+
+    &-count {
+      background-color: #53330f;
+      color: $color-white;
+      padding: 0 0.4rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    &-total {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__login {
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -10%);
+    }
+  }
+}

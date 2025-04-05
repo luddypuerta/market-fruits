@@ -1,0 +1,105 @@
+@use "@/styles/abstracts" as *;
+
+.product-card {
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: $spacing-md;
+  background-color: $color-white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease;
+
+  &:has(button:hover) {
+    box-shadow: 0 0 10px rgba($color-primary, 0.35);
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    margin-top: $spacing-sm;
+    font-weight: 600;
+  }
+
+  &__description {
+    color: #666;
+    font-size: 0.9rem;
+    margin: $spacing-xs 0;
+  }
+
+  &__price {
+    font-size: 1rem;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__add-cart {
+    background-color: $color-white;
+    border: 1px solid $color-accent;
+    color: $color-text;
+    padding: $spacing-xs $spacing-md;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #f9f5e6;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  
+    p {
+      font-size: 0.9rem;
+      margin-right: auto;
+    }
+  
+    .btn-circle {
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+  
+      &.outline {
+        background-color: white;
+        border: 1px solid #e0c65a;
+      }
+  
+      &.filled {
+        background-color: #f9b233;
+        color: #2b1c01;
+      }
+    }
+  }
+}
+
+@container (max-width: 300px) {
+  .product-card {
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__description {
+      font-size: 0.8rem;
+    }
+
+    &__add-cart {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.75rem;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["DOM", "ESNext"],
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@mfe/ui-lib": ["packages/ui-lib"]
+    },
+    "types": ["vitest"]
+  },
+  "include": ["apps", "packages"]
+}

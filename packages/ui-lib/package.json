@@ -1,0 +1,39 @@
+{
+  "name": "@libluddy/ui-lib",
+  "version": "1.0.3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@mui/material": "^5.15.7",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
+    "@storybook/test": "^8.6.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^8.6.12",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "@mui/material": "^5.15.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

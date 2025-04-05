@@ -1,0 +1,117 @@
+@use "@/styles/abstracts" as *;
+
+.cart-drawer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__header {
+        display: flex;
+        flex: 0;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+
+        h2 {
+            margin: 0;
+        }
+        &-close {
+            display: flex;
+            flex: 1;
+        }
+    }
+
+    &__body {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .cart-item {
+        display: flex;
+        gap: 1rem;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 1rem;
+        padding: 6px 10px 8px 8px;
+    
+        &__img {
+            object-fit: contain;
+            width: 120px;
+            height: auto;
+            background: transparent;
+        }
+    
+        &__info {
+            flex: 1;
+            margin-top: $spacing-xs;
+        }
+    
+        &__name {
+            font-weight: bold; 
+            margin-bottom: $spacing-xxs;
+        }
+    
+        &__price {
+            font-size: 0.9rem;
+            border-bottom: .5px solid $color-border;
+        }
+
+        &__container-quantity {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        &__quantity {
+            margin-top: $spacing-xs;
+            font-size: 0.85rem;
+        }
+
+        &__controls {
+            display: flex;
+            align-items: center;
+            gap: $spacing-xxs;
+            margin-top: $spacing-xs;
+          
+            .btn-circle {
+              border: none;
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+          
+              &.outline {
+                background-color: $color-white;
+                border: 1px solid $color-accent;
+                color: #333;
+              }
+          
+              &.filled {
+                background-color: #f9b233;
+                color: #2b1c01;
+              }
+            }
+        }
+    }
+    
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    &__footer {
+        padding: 1rem;
+        border-top: 1px solid #eee;
+
+        &__total {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+    }
+}
+  
+  

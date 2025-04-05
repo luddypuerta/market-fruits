@@ -1,0 +1,20 @@
+@use "@/styles/abstracts" as *;
+
+.product-section {
+  padding: 0 $spacing-lg $spacing-lg;
+
+  &__title {
+    color: $color-primary;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: $spacing-md;
+  }
+
+  &__product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: $spacing-md;
+
+    container-type: inline-size;
+  }
+}

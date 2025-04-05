@@ -1,0 +1,12 @@
+@use "@/styles/abstracts" as *;
+
+.admin-invoices {
+    padding: $padding-lg;
+
+    &__title {
+        font-size: $font-size-lg;
+        font-weight: bold;
+        margin-bottom: $spacing-md;
+        color: #00b140;
+    }
+}

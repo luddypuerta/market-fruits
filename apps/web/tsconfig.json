@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@mfe/ui-lib": ["../../packages/ui-lib"]
+    }
+  },
+  "include": ["src"]
+}
+
+
