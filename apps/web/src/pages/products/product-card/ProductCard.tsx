@@ -52,11 +52,13 @@ const ProductCard: React.FC<Product> = ({
   return (
     <>
       <div className="product-card">
-        <img
-          src={new URL(`@/assets/images/${image}`, import.meta.url).href}
-          alt={name}
-          className="product-card__image"
-        />
+        {image && (
+          <img
+            src={`/assets/images/${image}`}
+            alt={name}
+            className="product-card__image"
+          />
+        )}
         <h3 className="product-card__title">{name}</h3>
         <p className="product-card__description">Stock: {stock}</p>
         <p className="product-card__price">
