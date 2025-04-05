@@ -10,7 +10,8 @@
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "noEmit": true
   },
   "include": ["src"]
 }
